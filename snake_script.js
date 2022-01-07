@@ -1,3 +1,6 @@
+    // Score
+    let score = document.getElementById('score');
+
 
     // Snake color
     const snakeColColor = 'lightblue';
@@ -63,6 +66,19 @@
         snakeBoardCtx.strokestyle = snakeBoardColor;
         snakeBoardCtx.fillRect(snakePart.x, snakePart.y, 10, 10);
         snakeBoardCtx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+    }
+    
+    function moveSnake() {
+        const head = {x: snake[0].x + 0, y : snake[0].y + 10};
+
+        snake.unshift(head);
+        const hasEatenFood = snake[0].x === foodX && snake[0].y == foodY;
+        if(hasEatenFood) {
+            score.innerHTML +=10;
+            genFood();
+        } else {
+            snake.pop()
+        }
     }
 
     function randomFood(min, max) {
