@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Snake game</title>
+    <link rel="icon" href="icon/snake.png">
+    <title>Snake Game</title>
 </head>
 <body>
     <div class="container-fluid">
         <canvas id="snakeboard" width="500" height="500"></canvas>
         <div class="button-box">
             <div>
-                <button id="play" onclick="main()">Play</button>
+                <button class="fas fa-play" id="play" onclick="main()"></button>
             </div>
             <div>
                 <a href="index.html"><button id="replay">Replay</button></a>
             </div>
             <div>
-                <button id="pause" onclick="gamePause()">Pause</button>
+                <button class="fas fa-pause" id="pause" onclick="gamePause()"></button>
             </div>
         </div>
         <span id="score">0</span>
