@@ -37,8 +37,12 @@
     genFood();
 
     document.addEventListener('keydown', changeDirection);
+    
+
 
     function main() {
+
+        if(hasGameEnded()) return;
         
         changingDirection = false;
         setTimeout(function onTick()
@@ -110,6 +114,20 @@
             dy = 10;
         }
     }    
+
+    function hasGameEnded() {
+        for(let i = 4; i < snake.length; i++) {
+            if(snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true;
+        }
+            const hitLeftWall = snake[0].x < 0;
+            const hitRightWall = snake[0].x > snakeBoard.width - 10;
+            const hitTopWall = snake[0].y < 0;
+            const hitBottomWall = snake[0].y > snakeBoard.width - 10;
+
+            const hitWall = hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
+
+            return hitWall;
+    }
  
     function moveSnake() {
         const head = {x: snake[0].x + dx, y : snake[0].y + dy};
