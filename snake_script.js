@@ -45,7 +45,19 @@
         snakeBoardCtx.fillRect(0, 0, snakeBoard.width, snakeBoard.height);
         // Draw a border 
         snakeBoardCtx.strokeRect(0, 0, snakeBoard.width, snakeBoard.height);
-       
     }
-    clearCanvas()
+    clearCanvas();
+
+    function drawSnake() {
+        snake.forEach(drawSnakePart)
+    }
+    drawSnake();
+
+    function drawSnakePart(snakePart) {
+        snakeBoardCtx.fillStyle = snakeColColor;
+        snakeBoardCtx.strokestyle = snakeBoardColor;
+        snakeBoardCtx.fillRect(snakePart.x, snakePart.y, 10, 10);
+        snakeBoardCtx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+    }
+    drawSnakePart()
 
