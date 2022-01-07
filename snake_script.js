@@ -1,4 +1,7 @@
     let score = 0;
+
+    let play = document.getElementById('play')
+    let pause = document.getElementById('pause');
     // Snake color
     const snakeColColor = 'lightblue';
     const snakeBoardColor = 'green';
@@ -29,20 +32,16 @@
 
     let changingDirection = false;
 
-    main();
-
-    genFood();
-
     document.addEventListener('keydown', changeDirection);
     
-
+    genFood();
 
     function main() {
 
         if(hasGameEnded()) return;
         
         changingDirection = false;
-        setTimeout(function onTick()
+        timeOut = window.setTimeout(function onTick()
         {
             clearCanvas();
             drawFood();
@@ -51,17 +50,14 @@
             main();
         }, 100)
     }
+    main();
 
     // Create a canvas
     function clearCanvas() {
         // Add background color to canvas
         snakeBoardCtx.fillStyle = canvasColColor;
-        // Add boarder color to canvas
-        snakeBoardCtx.strokestyle = canvasBoardColor;
         // Fill entirely canvas
         snakeBoardCtx.fillRect(0, 0, snakeBoard.width, snakeBoard.height);
-        // Draw a border 
-        snakeBoardCtx.strokeRect(0, 0, snakeBoard.width, snakeBoard.height);
     }
 
     // Draw each part of snake
@@ -161,4 +157,9 @@
         snakeBoardCtx.strokestyle = foodBoardColor;
         snakeBoardCtx.fillRect(foodX, foodY, 10, 10);
         snakeBoardCtx.strokeRect(foodX, foodY, 10, 10)
+    }
+
+
+    function gamePause() {
+        window.clearTimeout(timeOut);
     }
