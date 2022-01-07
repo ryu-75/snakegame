@@ -17,6 +17,11 @@
     const snakeBoard = document.getElementById('snakeboard');
     const snakeBoardCtx = snakeBoard.getContext('2d');
 
+    // vertical movement
+    let dy = 0;
+    // horizontal movement
+    let dx = 10;
+
     const snake = [
         {x : 200, y : 200},
         {x : 190, y : 200},
@@ -31,16 +36,19 @@
 
     genFood();
 
+    document.addEventListener('keydown', changeDirection);
+
     function main() {
         
         changingDirection = false;
         setTimeout(function onTick()
         {
             clearCanvas();
-            drawSnake();
             drawFood();
+            drawSnake();
+            moveSnake();
             main();
-        })
+        }, 100)
     }
 
     // Create a canvas
@@ -67,12 +75,47 @@
         snakeBoardCtx.fillRect(snakePart.x, snakePart.y, 10, 10);
         snakeBoardCtx.strokeRect(snakePart.x, snakePart.y, 10, 10);
     }
-    
+
+    function changeDirection(e) {
+        const LEFT_KEY = 37;
+        const RIGHT_KEY = 39;
+        const UP_KEY = 38;
+        const DOWN_KEY = 40;
+
+        if(changeDirection) return;
+        changingDirection = true;
+        const keyPressed = e.keyCode;
+        const goingUp = dy === -10;
+        const goingDown = dy === 10;
+        const goingLeft = dx === -10;
+        const goingRight = dx === 10;
+
+        if(keyPressed === LEFT_KEY && !goingRight) {
+            dx = -10;
+            dy = 0;
+        } 
+
+        if(keyPressed === RIGHT_KEY && !goingLeft) {
+            dx = 10;
+            dy = 0;
+        }
+
+        if(keyPressed === UP_KEY && !goingDown) {
+            dx = 0;
+            dy = -10
+        }
+
+        if(keyPressed === DOWN_KEY && !goingUp) {
+            dx = 0;
+            dy = 10;
+        }
+    }    
+ 
     function moveSnake() {
-        const head = {x: snake[0].x + 0, y : snake[0].y + 10};
+        const head = {x: snake[0].x + dx, y : snake[0].y + dy};
 
         snake.unshift(head);
-        const hasEatenFood = snake[0].x === foodX && snake[0].y == foodY;
+        const hasEatenFood = snake[0].x === foodX && snake[0].y === foodY;
         if(hasEatenFood) {
             score.innerHTML +=10;
             genFood();
