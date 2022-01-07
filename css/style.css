@@ -1,13 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+
 #snakeboard {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 1rem ridge gray;
 }
 
 #score {
     text-align: center;
     font-size: 100px;
+    text-align: center;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    gap: 25rem;
+    margin-top: 75px;
+    position: relative
+}
+#replay,
+#play, 
+#pause {
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0.7), rgb(255, 217, 0) 80.71%);
+    color: rgb(69, 65, 65);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0px solid rgba(175, 175, 175);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    bottom: -850px
+}
+
+#play:active,
+#pause:active,
+#replay:active {
+    width: 75px;
+    height: 75px;
+}
+
+#play:hover,
+#pause:hover,
+#replay:hover {
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0.7), rgb(255, 153, 0) 80.71%);
 }
