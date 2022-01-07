@@ -2,6 +2,7 @@
 
     let play = document.getElementById('play')
     let pause = document.getElementById('pause');
+    
     // Snake color
     const snakeColColor = 'lightblue';
     const snakeBoardColor = 'green';
@@ -161,5 +162,5 @@
 
 
     function gamePause() {
-        window.clearTimeout(timeOut);
+        if(window.clearTimeout(timeOut)) return;
     }
