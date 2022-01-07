@@ -24,6 +24,9 @@
 
     let changingDirection = false;
 
+    main();
+
+    genFood();
 
     function main() {
         
@@ -31,6 +34,8 @@
         setTimeout(function onTick()
         {
             clearCanvas();
+            drawSnake();
+            drawFood();
             main();
         })
     }
@@ -46,18 +51,37 @@
         // Draw a border 
         snakeBoardCtx.strokeRect(0, 0, snakeBoard.width, snakeBoard.height);
     }
-    clearCanvas();
 
+    // Draw each part of snake
     function drawSnake() {
         snake.forEach(drawSnakePart)
     }
-    drawSnake();
 
+    // Create each part of snake
     function drawSnakePart(snakePart) {
         snakeBoardCtx.fillStyle = snakeColColor;
         snakeBoardCtx.strokestyle = snakeBoardColor;
         snakeBoardCtx.fillRect(snakePart.x, snakePart.y, 10, 10);
         snakeBoardCtx.strokeRect(snakePart.x, snakePart.y, 10, 10);
     }
-    drawSnakePart()
 
+    function randomFood(min, max) {
+        return Math.round((Math.random() * (max - min) + min) / 10) * 10;
+    }
+
+    function genFood() {
+        foodX = randomFood(0, snakeBoardCtx.width - 10);
+        foodY = randomFood(0, snakeBoardCtx.height - 10);
+        snake.forEach(function hasSnakeEatenFood(part) {
+            const hasEaten = part.x == foodX && part.y == foodY;
+            if (hasEaten) genFood()
+            
+        })
+    }
+
+    function drawFood() {
+        snakeBoardCtx.fillStyle = foodColColor;
+        snakeBoardCtx.strokestyle = foodBoardColor;
+        snakeBoardCtx.fillRect(foodX, foodY, 10, 10);
+        snakeBoardCtx.strokeRect(foodX, foodY, 10, 10)
+    }
