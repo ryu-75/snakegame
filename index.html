@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Snake game</title>
 </head>
 <body>
     <div class="container-fluid">
-        <span id="score">0</span>
         <canvas id="snakeboard" width="500" height="500"></canvas>
         <div class="button-box">
-            <button class="play">Play</button>
-            <button class="pause">Pause</button>
+            <div>
+                <button id="play" onclick="main()">Play</button>
+            </div>
+            <div>
+                <a href="index.html"><button id="replay">Replay</button></a>
+            </div>
+            <div>
+                <button id="pause" onclick="gamePause()">Pause</button>
+            </div>
         </div>
+        <span id="score">0</span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="snake_script.js"></script>
