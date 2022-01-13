@@ -2,37 +2,62 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(0, 0, 0);
+    overflow: hidden;
 }
 
-#snakeboard {
+body {
+    background-color: black;
+}
+
+.row {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+
+}
+
+#snakeboard {
     border: 1rem ridge gray;
 }
 
 #score {
     text-align: center;
     font-size: 100px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    color: #fff;
+    color: #fff;   
+    margin: 25px; 
+    margin-top: 180px;
 }
 
 canvas {
     background-color: lightgray;
+    width: 500px;
+    height: 500px;
 }
+/*
+.button-box div {
+    margin-top: 2rem;
+    margin-left: 52vw;
+    position:relative
+}
+*/
 
+/* Button */
 .button-box {
     display: flex;
     justify-content: center;
-    gap: 25rem;
-    margin-top: 75px;
-    position: relative
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin: 35px;
+    top: 42%;
+    left: 25%;
 }
+
 #replay,
 #play, 
 #pause {
@@ -41,16 +66,9 @@ canvas {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 5px solid rgb(255, 255, 255);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    bottom: -850px
+
 }
+
 
 #play:active,
 #pause:active,
@@ -63,4 +81,44 @@ canvas {
 #pause:hover,
 #replay:hover {
     background: linear-gradient(217deg, rgba(255, 255, 255, 0.7), rgb(255, 153, 0) 80.71%);
+}
+
+/* Responsive Design*/
+@media (orientation: landscape) {
+
+}
+
+@media all and (min-width: 200px) and (max-width: 620px) {
+    canvas {
+        width: 340px;
+        height: 300px;
+    }
+
+    #score {
+        font-size: 30px;
+        color: red;
+        padding-right: 15px;
+        justify-items: center;
+        transform: translateY(50%, -50%);
+    }
+
+    #replay,
+    #play, 
+    #pause {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .button-box {
+        align-items: center;
+        flex-flow: row;
+    }
+
+    .row {
+        flex-direction: column;
+    }
 }
