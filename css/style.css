@@ -28,6 +28,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  top: 250px;
 }
 
 #snakeboard {
@@ -139,7 +140,7 @@ canvas {
 }
 
 /* Responsive Design*/
-@media all and (min-width: 200px) and (max-width: 620px) {
+@media all and (min-width: 320px) and (max-width: 768px) {
   canvas {
     width: 340px;
     height: 300px;
