@@ -7,6 +7,7 @@
 
     let play = document.getElementById('play')
     let pause = document.getElementById('pause');
+    let replay = document.getElementById('replay');
 
     // Snake color
     const snakeColColor = 'lightblue';
@@ -38,8 +39,21 @@
 
     let changingDirection = false;
 
+    let id = document.getElementById('test')
+
     document.addEventListener('keydown', changeDirection);
     document.addEventListener('click', arrowMovement);
+    document.addEventListener('keydown', replayKey);
+
+    function replayKey(e) {
+        const SPACE = 32;
+
+        const keyPressed = e.keyCode;
+        if(keyPressed === SPACE) {
+            location.reload()
+        }
+    }
+
     genFood();
 
     function main() {
@@ -70,7 +84,7 @@
     function drawSnake() {
         snake.forEach(drawSnakePart)
     }
-
+ 
     function arrowMovement() {
         const UP_KEY = 38;
         const BOTTOM_KEY = 40;
