@@ -12,7 +12,7 @@ body {
 .row {
     display: flex;
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: row;
@@ -35,8 +35,8 @@ body {
 
 canvas {
     background-color: lightgray;
-    width: 500px;
-    height: 500px;
+    width: 900px;
+    height: 800px;
 }
 
 /* Button */
@@ -72,12 +72,7 @@ canvas {
     text-align: center;
 }
 
-#play:active,
-#pause:active,
-#replay:active {
-    width: 78px;
-    height: 78px;
-}
+
 
 .top-bottom {
     display: flex;
@@ -95,6 +90,18 @@ canvas {
     padding: 15px;
     margin-top: 48px
 }
+
+    #play:active,
+    #pause:active,
+    #replay:active,
+    #pause:active,
+    #left:active,
+    #top:active,
+    #right:active,
+    #bottom:active {
+        width: 79px;
+        height: 79px;
+    }
 
 #play:hover,
 #pause:hover,
@@ -137,6 +144,18 @@ canvas {
         font-size: 1rem;
         font-weight: bolder;
         text-align: center;
+    }
+
+    #play:active,
+    #pause:active,
+    #replay:active,
+    #pause:active,
+    #left:active,
+    #top:active,
+    #right:active,
+    #bottom:active {
+        width: 39px;
+        height: 39px;
     }
 
     .move-button-box {
