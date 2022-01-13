@@ -1,8 +1,13 @@
+    const left = document.getElementById('left');
+    const right = document.getElementById('right');
+    const up = document.getElementById('top');
+    const bottom = document.getElementById('bottom');
+
     let score = 0;
 
     let play = document.getElementById('play')
     let pause = document.getElementById('pause');
-    
+
     // Snake color
     const snakeColColor = 'lightblue';
     const snakeBoardColor = 'green';
@@ -34,7 +39,7 @@
     let changingDirection = false;
 
     document.addEventListener('keydown', changeDirection);
-    
+    document.addEventListener('click', changeDirection);
     genFood();
 
     function main() {
@@ -66,6 +71,54 @@
         snake.forEach(drawSnakePart)
     }
 
+    up.addEventListener('click', e => {
+        const UP_KEY = 38;
+        if(changingDirection) return;
+        changingDirection = true;
+        const goingDown = dy === 10;
+
+        if(UP_KEY && !goingDown) {
+            dx = 0;
+            dy = -10
+        }
+    })
+
+    bottom.addEventListener('click', e => {
+        const BOTTOM_KEY = 40;
+        if(changingDirection) return;
+        changingDirection = true;
+        const goingUp = dy === -10;
+
+        if(BOTTOM_KEY && !goingUp) {
+            dx = 0;
+            dy = 10
+        }
+    })
+    
+    left.addEventListener('click', e => {
+        const LEFT_KEY = 37;
+        if(changingDirection) return;
+        changingDirection = true;
+        const goingRight = dx === 10;
+
+        if(LEFT_KEY && !goingRight) {
+            dx = -10;
+            dy = 0
+        }
+    })
+    
+   right.addEventListener('click', e => {
+        const RIGHT_KEY = 39;
+        if(changingDirection) return;
+        changingDirection = true;
+        const goingLeft = dx === -10;
+
+        if(RIGHT_KEY && !goingLeft) {
+            dx = 10;
+            dy = 0;
+        }
+    })
+
     // Create each part of snake
     function drawSnakePart(snakePart) {
         snakeBoardCtx.fillStyle = snakeColColor;
@@ -73,7 +126,23 @@
         snakeBoardCtx.fillRect(snakePart.x, snakePart.y, 10, 10);
         snakeBoardCtx.strokeRect(snakePart.x, snakePart.y, 10, 10);
     }
-
+/*
+    document.addEventListener('click', function(e) {
+        switch (e.keyCode) {
+            case 37:
+                moveLeft.getElementById('left');
+                break;
+            case 38:
+                moveTop.getElementById('top');
+                break;
+            case 39: 
+                moveRight.getElementById('right');
+                break;
+            case 40: 
+                moveBottom.getElementById('bottom')
+        }
+    })
+*/
     function hasGameEnded() {
         for(let i = 4; i < snake.length; i++) {
             if(snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true;
