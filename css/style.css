@@ -127,6 +127,10 @@ canvas {
         transform: translateY(50%, -50%);
     }
 
+    .row {
+        padding-left: 8%;
+    }
+
     #replay,
     #play, 
     #pause,
