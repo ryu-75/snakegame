@@ -60,21 +60,47 @@ canvas {
 
 #replay,
 #play, 
-#pause {
+#pause,
+#left,
+#top,
+#right,
+#bottom {
     background: linear-gradient(217deg, rgba(255, 255, 255, 0.7), rgb(255, 217, 0) 80.71%);
     color: rgb(69, 65, 65);
     width: 80px;
     height: 80px;
     border-radius: 50%;
-
 }
 
+.move-button-box {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 #play:active,
 #pause:active,
 #replay:active {
     width: 78px;
     height: 78px;
+}
+
+.top-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+#top,
+#bottom {
+    margin: 8px;
+}
+
+.left-button, .right-button {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin-top: 48px
 }
 
 #play:hover,
@@ -103,13 +129,23 @@ canvas {
 
     #replay,
     #play, 
-    #pause {
+    #pause,
+    #left,
+    #top,
+    #right,
+    #bottom {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         font-size: 1rem;
         font-weight: bolder;
         text-align: center;
+    }
+
+    .move-button-box {
+        display: flex;
+        flex-shrink: inherit;
+        visibility: visible;
     }
 
     .button-box {
