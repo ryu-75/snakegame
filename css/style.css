@@ -96,7 +96,6 @@ canvas {
 
     #score {
         font-size: 30px;
-        color: red;
         padding-right: 15px;
         justify-items: center;
         transform: translateY(50%, -50%);
