@@ -5,6 +5,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 body {
@@ -195,6 +196,10 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #lose {
+    font-size: 9rem;
+    top: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */

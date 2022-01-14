@@ -58,7 +58,10 @@
 
     function main() {
 
-        if(hasGameEnded()) return;
+        if(hasGameEnded()) {
+            document.getElementById('lose').style.visibility = "visible";
+            return;
+        }
         
         changingDirection = false;
         timeOut = window.setTimeout(function onTick()
@@ -165,8 +168,8 @@
             const hitBottomWall = snake[0].y > snakeBoard.width - 10;
 
             const hitWall = hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
-
-            return hitWall;
+            const lose = document.getElementById('lose');
+            return hitWall
     }
 
     function changeDirection(e) {
