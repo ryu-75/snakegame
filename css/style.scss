@@ -14,11 +14,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    transform: translate(-50%,-28%);
+    transform-origin: 0 0;
     top: 250px;
+    flex-direction: column;
 }
 
 #snakeboard {
@@ -27,24 +26,25 @@ body {
 
 #score {
     text-align: center;
-    font-size: 100px;
-    color: #fff;   
-    margin: 25px; 
-    margin-top: 180px;
+    font-size: 80px;
+    color: #fff;    
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
 }
 
 canvas {
     background-color: lightgray;
-    width: 900px;
-    height: 800px;
+    width: 500px;
+    height: 500px;
 }
 
 /* Button */
 .button-box {
     display: flex;
-    justify-content: center;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 2rem;
     margin: 35px;
     top: 42%;
@@ -63,7 +63,10 @@ canvas {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
 }
+
 
 .move-button-box {
     visibility: hidden;
@@ -112,7 +115,11 @@ canvas {
 /* Responsive Design*/
 
 
-@media all and (min-width: 320px) and (max-width: 768px) {
+@media all and (min-width: 320px) and (max-width: 762px) {
+    .row {
+        transform: translate(-50%, -40%);
+        padding-left: 8%;
+    }
     canvas {
         width: 340px;
         height: 300px;
@@ -120,13 +127,8 @@ canvas {
 
     #score {
         font-size: 30px;
-        padding-right: 15px;
-        justify-items: center;
+        justify-content: center;
         transform: translateY(50%, -50%);
-    }
-
-    .row {
-        padding-left: 8%;
     }
 
     #replay,
@@ -136,10 +138,10 @@ canvas {
     #top,
     #right,
     #bottom {
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
-        font-size: 1.8rem;
+        font-size: 2.6rem;
         font-weight: bolder;
         text-align: center;
     }
@@ -171,4 +173,5 @@ canvas {
         flex-direction: column;
     }
 }
+
 

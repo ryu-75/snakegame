@@ -17,18 +17,15 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-transform: translate(-50%, -28%);
+          transform: translate(-50%, -28%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
   top: 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #snakeboard {
@@ -37,16 +34,25 @@ body {
 
 #score {
   text-align: center;
-  font-size: 100px;
+  font-size: 80px;
   color: #fff;
-  margin: 25px;
-  margin-top: 180px;
+  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 canvas {
   background-color: lightgray;
-  width: 900px;
-  height: 800px;
+  width: 500px;
+  height: 500px;
 }
 
 /* Button */
@@ -54,15 +60,12 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 2rem;
   margin: 35px;
   top: 42%;
@@ -81,6 +84,8 @@ canvas {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .move-button-box {
@@ -140,20 +145,23 @@ canvas {
 }
 
 /* Responsive Design*/
-@media all and (min-width: 320px) and (max-width: 768px) {
+@media all and (min-width: 320px) and (max-width: 762px) {
+  .row {
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+    padding-left: 8%;
+  }
   canvas {
     width: 340px;
     height: 300px;
   }
   #score {
     font-size: 30px;
-    padding-right: 15px;
-    justify-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transform: translateY(50%, -50%);
             transform: translateY(50%, -50%);
-  }
-  .row {
-    padding-left: 8%;
   }
   #replay,
   #play,
@@ -162,10 +170,10 @@ canvas {
   #top,
   #right,
   #bottom {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     font-weight: bolder;
     text-align: center;
   }
