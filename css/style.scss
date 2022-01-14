@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow:auto;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     left: 50%;
     transform: translate(-50%,-28%);
     transform-origin: 0 0;
-    top: 250px;
+    top: 220px;
     flex-direction: column;
 }
 
@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     display: flex;
     justify-content: center;
-}
+} 
 
 canvas {
     background-color: lightgray;
@@ -45,10 +45,7 @@ canvas {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin-top: 2rem;
-    margin: 35px;
-    top: 42%;
-    left: 25%;
+
 }
 
 #replay,
@@ -76,35 +73,11 @@ canvas {
 }
 
 
-
-.top-bottom {
-    display: flex;
-    flex-direction: column;
-}
-
 #top,
 #bottom {
     margin: 8px;
 }
 
-.left-button, .right-button {
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    margin-top: 48px
-}
-
-    #play:active,
-    #pause:active,
-    #replay:active,
-    #pause:active,
-    #left:active,
-    #top:active,
-    #right:active,
-    #bottom:active {
-        width: 79px;
-        height: 79px;
-    }
 
 #play:hover,
 #pause:hover,
@@ -115,7 +88,7 @@ canvas {
 /* Responsive Design*/
 
 
-@media all and (min-width: 320px) and (max-width: 762px) {
+@media all and (min-width: 320px) and (max-width: 812px) {
     .row {
         transform: translate(-50%, -40%);
         padding-left: 8%;
@@ -126,7 +99,7 @@ canvas {
     }
 
     #score {
-        font-size: 30px;
+        font-size: 45px;
         justify-content: center;
         transform: translateY(50%, -50%);
     }
@@ -144,24 +117,26 @@ canvas {
         font-size: 2.6rem;
         font-weight: bolder;
         text-align: center;
+        position:static
     }
 
-    #play:active,
-    #pause:active,
-    #replay:active,
-    #pause:active,
-    #left:active,
-    #top:active,
-    #right:active,
-    #bottom:active {
-        width: 39px;
-        height: 39px;
+    .top-bottom {
+        display: flex;
+        flex-direction: column;
     }
 
     .move-button-box {
         display: flex;
         flex-shrink: inherit;
         visibility: visible;
+        margin-top: 15px;
+    }
+   
+    .left-button, .right-button {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin-top: 64px
     }
 
     .button-box {

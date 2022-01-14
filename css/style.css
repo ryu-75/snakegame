@@ -3,7 +3,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
           transform: translate(-50%, -28%);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
-  top: 250px;
+  top: 220px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -66,10 +66,6 @@ canvas {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 2rem;
-  margin: 35px;
-  top: 42%;
-  left: 25%;
 }
 
 #replay,
@@ -99,43 +95,9 @@ canvas {
   text-align: center;
 }
 
-.top-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 #top,
 #bottom {
   margin: 8px;
-}
-
-.left-button, .right-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 15px;
-  margin-top: 48px;
-}
-
-#play:active,
-#pause:active,
-#replay:active,
-#pause:active,
-#left:active,
-#top:active,
-#right:active,
-#bottom:active {
-  width: 79px;
-  height: 79px;
 }
 
 #play:hover,
@@ -145,7 +107,7 @@ canvas {
 }
 
 /* Responsive Design*/
-@media all and (min-width: 320px) and (max-width: 762px) {
+@media all and (min-width: 320px) and (max-width: 812px) {
   .row {
     -webkit-transform: translate(-50%, -40%);
             transform: translate(-50%, -40%);
@@ -156,7 +118,7 @@ canvas {
     height: 300px;
   }
   #score {
-    font-size: 30px;
+    font-size: 45px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -176,17 +138,16 @@ canvas {
     font-size: 2.6rem;
     font-weight: bolder;
     text-align: center;
+    position: static;
   }
-  #play:active,
-  #pause:active,
-  #replay:active,
-  #pause:active,
-  #left:active,
-  #top:active,
-  #right:active,
-  #bottom:active {
-    width: 39px;
-    height: 39px;
+  .top-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .move-button-box {
     display: -webkit-box;
@@ -195,6 +156,18 @@ canvas {
     -ms-flex-negative: inherit;
         flex-shrink: inherit;
     visibility: visible;
+    margin-top: 15px;
+  }
+  .left-button, .right-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 15px;
+    margin-top: 64px;
   }
   .button-box {
     -webkit-box-align: center;
