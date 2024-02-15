@@ -2,7 +2,8 @@
 <h2>About the project</h2>
 <p>
   This is my first retro video game coded in Javascript.<br>
-  I u
+  I used SCSS to preprocess my CSS and have better control with the overall style of the page.<br>
+  And concerning the javascript library, I used the most famous javascript library : JQuery
 </p>
 <h2>How to launch the game</h2>
 <p>Click here</p>
