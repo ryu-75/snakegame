@@ -1,9 +1,13 @@
 # SNAKEGAME
 
 <h2>How to launch the game</h2>
-<p>Click here ⬇</p>
+<p>Click here</p>
 <br>
 <img src="https://github.com/ryu-75/snakegame/assets/79263476/3c654292-6ec5-4790-a6bc-9678edf96b01"></img>
+<br>
+<p>and then here</p>
+<img src="https://github.com/ryu-75/snakegame/assets/79263476/01759565-9ff4-4dfc-ab9d-63301763cd89"></img>
+<br>
 
 <h2>How to play on your computer ?</h2>
 <p>Use the arrow keys : </p>
