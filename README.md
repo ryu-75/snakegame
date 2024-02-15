@@ -2,7 +2,6 @@
 
 <h2>How to launch the game</h2>
 <p>Click here</p>
-<br>
 <img src="https://github.com/ryu-75/snakegame/assets/79263476/3c654292-6ec5-4790-a6bc-9678edf96b01"></img>
 <br>
 <p>and then here</p>
