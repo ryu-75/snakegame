@@ -9,6 +9,6 @@
 <p>🔄 for replay</p>
 
 <h2>Goal</h2>
-<p>Eaten as many apple as you can and touch the sky !</p>
+<p>Eat as many apples as possible and exceed your best score !</p>
 
 <h3>Enjoy 😉</h3>
