@@ -1,5 +1,9 @@
 # SNAKEGAME
-
+<h2>About the project</h2>
+<p>
+  This is my first retro video game coded in Javascript.<br>
+  I u
+</p>
 <h2>How to launch the game</h2>
 <p>Click here</p>
 <img src="https://github.com/ryu-75/snakegame/assets/79263476/3c654292-6ec5-4790-a6bc-9678edf96b01"></img>
