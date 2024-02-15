@@ -9,6 +9,7 @@
 <br>
 
 <h2>How to play on your computer ?</h2>
+<p>On computer used arrow keys</p>
 <ul>
   <li>
     <p>>Use the arrow keys :</p>
@@ -19,7 +20,7 @@
   </li>
 </ul>
 
-<p>On phone use the arrow buttons</p>
+<p>On phone used arrow buttons</p>
 <ul>
   <li>
     <p>🔄 for replay</p>
