@@ -9,12 +9,22 @@
 <br>
 
 <h2>How to play on your computer ?</h2>
-<p>Use the arrow keys : </p>
-<p>⬅⬆➡⬇</p>
-<p>Space for replay</p>
+<ul>
+  <li>
+    <p>>Use the arrow keys :</p>
+    <p>⬅⬆➡⬇</p>
+  </li>
+  <li>
+    <p>Space for replay</p>
+  </li>
+</ul>
 
 <p>On phone use the arrow buttons</p>
-<p>🔄 for replay</p>
+<ul>
+  <li>
+    <p>🔄 for replay</p>
+  </li>
+</ul>
 
 <h2>Goal</h2>
 <p>Eat as many apples as possible and exceed your best score !</p>
