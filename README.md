@@ -2,7 +2,7 @@
 
 <h2>How to launch the game</h2>
 Click here ⬇
-![Screenshot 2024-02-15 171721](https://github.com/ryu-75/snakegame/assets/79263476/3c654292-6ec5-4790-a6bc-9678edf96b01)
+<img src="![Screenshot 2024-02-15 171721](https://github.com/ryu-75/snakegame/assets/79263476/3c654292-6ec5-4790-a6bc-9678edf96b01)"></img>
 
 <h2>How to play on your computer ?</h2>
 <p>Use the arrow keys : </p>
